@@ -1,0 +1,32 @@
+fieldset{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    background-color:#e5e5cb;
+    box-shadow: -20px 10px 30px 0px rgba(0, 0, 0, 0.25);
+  
+  }
+
+.icon {
+  color:white;
+  text-align: center;
+  background-color: #007bff;
+}
+body{
+  background: linear-gradient(to right, #2e3192,#1bffff);
+}
+li{
+  margin-top: 10px;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.editing{
+  margin-left: 10px;
+  border-radius: 5px;
+}

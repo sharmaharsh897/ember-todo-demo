@@ -65,5 +65,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.2"
   }
 }

@@ -1,0 +1,58 @@
+<main class='container mt-5'>
+  <h3 style='text-align: center; font-family:Times New Roman; font-family:bolder;'>Todo Input</h3>
+  <fieldset>
+    <form onsubmit={{fn this.submit @model}} style='width:80%; margin:auto'>
+      <div class='input-group mb-2 mr-sm-2'>
+        <div class='input-group-prepend'>
+          <div class='input-group-text fa fa-book icon'>
+
+          </div>
+        </div>
+        <input
+          value={{this.text.todo}}
+          onchange={{fn this.onChange}}
+          type='text'
+          class='form-control'
+          placeholder='New Todo'
+        />
+      </div>
+      <button type='submit' class='btn btn-primary btn-lg btn-block'>
+        Add new task</button>
+    </form>
+  </fieldset>
+  <br />
+  <fieldset>
+    <ol class='todos'>
+      {{#each @model as |item|}}
+        <li>{{item.todo}}
+          <i
+            onclick={{fn this.delete @model item}}
+            type='button'
+            style='float:right; cursor:pointer; font-size: 18px;'
+            class='fa fa-trash'
+            aria-hidden='true'
+          >
+          </i>
+          <form style='display: inline;'>
+            {{!-- {{#if this.isEditable}} --}}
+            <input
+              placeholder='New Value'
+              style='display: none;'
+              type='text'
+              value={{@item.todo}}
+              onchange={{fn this.onChange}}
+              class="editing"
+            />
+            {{!-- {{/if}} --}}
+            <button
+              onclick={{fn this.edit @model item}}
+              class='fa fa-pencil'
+              style='border: none; float:right; background-color:#e5e5cb;'
+              type='submit'
+            ></button>
+          </form>
+        </li>
+      {{/each}}
+    </ol>
+  </fieldset>
+</main>
